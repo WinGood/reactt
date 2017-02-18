@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './Employee.css';
 import FormControl from './FormControl';
 
 class Employee extends Component {
@@ -65,16 +66,18 @@ class Employee extends Component {
           />
         </td>
         <td>
+          <div className="employee-actions">
           {
             (this.state.isEditMode)
               ?
-              <div>
-                <button className="btn btn-success" onClick={this.saveEdit}>Save</button>
-                <button className="btn btn-danger" onClick={this.offEdit}>Close</button>
-              </div>
+                <div>
+                  <button className="btn btn-success" onClick={this.saveEdit}>Save</button>
+                  <button className="btn btn-danger" onClick={this.offEdit}>Close</button>
+                </div>
               :
               <button className="btn btn-primary" onClick={this.onEdit}>Edit</button>
           }
+          </div>
         </td>
       </tr>
     );

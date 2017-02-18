@@ -9,8 +9,8 @@ class Sidebar extends Component {
           {
             this.props.departments.map(department => {
               return (
-                <li key={department.id} className="active">
-                  <Link to={`departments/${department.id}`}>
+                <li key={department.id}>
+                  <Link to={`departments/${department.id}`} activeClassName="active">
                     {department.name}
                   </Link>
                 </li>
