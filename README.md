@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+### Hot to start
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+```
+npm i
+json-server db.json --port 3001
+npm run
+```
+
+**More about:**
+* json-server [repository](https://github.com/typicode/json-server)
+* Create React App [repository](https://github.com/facebookincubator/create-react-app)
