@@ -20,7 +20,7 @@ const middleware = store => next => action => {
   });
 
   action.promise
-    .then((response) => {
+    .then(response => {
       if (response._bodyInit) {
         const body = JSON.parse(response._bodyInit);
 
@@ -31,18 +31,18 @@ const middleware = store => next => action => {
 
       return response;
     })
-    .then((response) => {
+    .then(response => {
       if (response.json) {
         return response.json();
       }
 
       return response;
     })
-    .then((data) => store.dispatch({
+    .then(data => store.dispatch({
       type: successAction,
       data
     }))
-    .catch((error) => {
+    .catch(error => {
       store.dispatch({
         type: failureAction,
         code: error.status,

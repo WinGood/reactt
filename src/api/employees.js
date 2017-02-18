@@ -1,7 +1,7 @@
 import request from './request';
 
 const methods = {
-  updateEmployee(employee) {
+  update(employee) {
     return request.put(`/employees/${employee.id}`, {
       ...employee
     });

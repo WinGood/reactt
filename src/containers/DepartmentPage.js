@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import DepartmentPage from '../components/DepartmentPage';
 import { getEmployeesById } from '../actions/departments';
+import { update } from '../actions/employees';
 
 function mapStateToProps(state) {
   return {
@@ -13,6 +14,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     getEmployees: (id) => dispatch(getEmployeesById(id)),
+    updateEmployee: (employee) => dispatch(update(employee)),
   };
 }
 

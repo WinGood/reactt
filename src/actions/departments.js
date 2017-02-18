@@ -1,9 +1,14 @@
 import api from '../api';
+import AppConstants from '../constants/AppConstants';
 
 export function getEmployeesById(id) {
   return {
     type: 'API',
-    actions: ['GET_EMPLOYEES_REQUEST', 'GET_EMPLOYEES_SUCCESS', 'GET_EMPLOYEES_FAIL'],
+    actions: [
+      AppConstants.GET_EMPLOYEES_REQUEST,
+      AppConstants.GET_EMPLOYEES_SUCCESS,
+      AppConstants.GET_EMPLOYEES_FAIL
+    ],
     promise: api.departments.getEmployeesById(id),
     departmentId: parseInt(id)
   }

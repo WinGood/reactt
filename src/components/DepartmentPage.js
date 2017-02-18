@@ -34,6 +34,9 @@ class DepartmentPage extends Component {
               this.props.employees.map(employee => {
                 return (
                   <Employee key={employee.id}
+                            onUpdate={this.props.updateEmployee}
+                            id={employee.id}
+                            departmentId={employee.departmentId}
                             firstName={employee.firstName}
                             lastName={employee.lastName} />
                 );
@@ -50,7 +53,8 @@ class DepartmentPage extends Component {
 DepartmentPage.propTypes = {
   department: React.PropTypes.object.isRequired,
   employees: React.PropTypes.array.isRequired,
-  getEmployees: React.PropTypes.func.isRequired
+  getEmployees: React.PropTypes.func.isRequired,
+  updateEmployee: React.PropTypes.func.isRequired
 }
 
 export default DepartmentPage;

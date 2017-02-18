@@ -1,4 +1,5 @@
 import db from '../../db.json';
+import AppConstants from '../constants/AppConstants';
 
 const init = {
   list: db.departments,
@@ -8,7 +9,7 @@ const init = {
 
 const departments = (state = init, action) => {
   switch (action.type) {
-    case 'GET_EMPLOYEES_REQUEST':
+    case AppConstants.GET_EMPLOYEES_REQUEST:
     {
       const department = state.list.find(department => department.id === action.body.departmentId);
       return {
@@ -16,7 +17,7 @@ const departments = (state = init, action) => {
         department: department,
       };
     }
-    case 'GET_EMPLOYEES_SUCCESS':
+    case AppConstants.GET_EMPLOYEES_SUCCESS:
     {
       return {
         ...state,

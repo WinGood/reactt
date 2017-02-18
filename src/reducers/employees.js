@@ -1,10 +1,18 @@
 import db from '../../db.json';
+import AppConstants from '../constants/AppConstants';
 
 const employees = (state = db.employees, action) => {
   switch (action.type) {
-    case 'GET_CITIES_SUCCESS':
+    case AppConstants.UPDATE_EMPLOYEE_REQUEST:
     {
-      return [...action.data];
+      const nextState = [...state];
+      const index     = nextState.findIndex(employee => {
+        return employee.id === action.body.employee.id;
+      });
+
+      nextState[index] = action.body.employee;
+
+      return nextState;
     }
     default:
       return state;
