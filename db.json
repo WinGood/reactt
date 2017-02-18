@@ -1,0 +1,48 @@
+{
+  "departments": [
+    {
+      "id": 1,
+      "name": "JavaScript"
+    },
+    {
+      "id": 2,
+      "name": "Angular.js"
+    },
+    {
+      "id": 3,
+      "name": "React Native"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "firstName": "Jean",
+      "lastName": "Witherspoon",
+      "departmentId": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Richard",
+      "lastName": "Rahman",
+      "departmentId": 1
+    },
+    {
+      "id": 3,
+      "firstName": "James",
+      "lastName": "Brown",
+      "departmentId": 2
+    },
+    {
+      "id": 4,
+      "firstName": "Brian",
+      "lastName": "Beecher",
+      "departmentId": 2
+    },
+    {
+      "id": 5,
+      "firstName": "Brad",
+      "lastName": "Goss",
+      "departmentId": 3
+    }
+  ]
+}
