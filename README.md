@@ -1,9 +1,9 @@
-### Hot to run
+## Hot to run
 
 ```
 npm i
 json-server db.json --port 3001
-npm run
+npm run start
 ```
 
 **More about:**
