@@ -10,6 +10,6 @@ export function getEmployeesById(id) {
       AppConstants.GET_EMPLOYEES_FAIL
     ],
     promise: api.departments.getEmployeesById(id),
-    departmentId: parseInt(id)
+    departmentId: parseInt(id, 10)
   }
 }

@@ -21,12 +21,8 @@ const middleware = store => next => action => {
 
   action.promise
     .then(response => {
-      if (response._bodyInit) {
-        const body = JSON.parse(response._bodyInit);
-
-        if (response.status > 201) {
-          throw new ApiError(body.message, response.status);
-        }
+      if (response.status > 201) {
+        throw new ApiError(response.statusText, response.status);
       }
 
       return response;
