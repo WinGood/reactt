@@ -1,4 +1,4 @@
-### Hot to start
+### Hot to run
 
 ```
 npm i
